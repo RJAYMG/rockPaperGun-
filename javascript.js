@@ -1,3 +1,5 @@
-function getComputerChoice() {
-    randomChoice = Math.floor(Math.random() * 3 + 1)
+const choice = ["Rock", "Paper", "Scissor", "Gun"]
+
+function getComputerChoice(choice) {
+    randomChoice = Math.floor(Math.random() * choice.length)
 }
