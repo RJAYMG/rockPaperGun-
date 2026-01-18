@@ -24,13 +24,27 @@ function lose() {
     return "You lose!"
 }
 
+console.log(getComputerChoice())
+console.log(getHumanChoice())
+
 while (!gameOver === true) {
     if (getComputerChoice==="rock" && getHumanChoice==="scissor") {
         console.log(lose())
+        gameOver == true
     } else if (getComputerChoice==="paper" && getHumanChoice==="rock") {
         console.log(lose())
+        gameOver == true
+    } else if (getComputerChoice==="scissor" && getHumanChoice==="paper") {
+        console.log(lose())
+        gameOver == true
+    } else if (getHumanChoice==="rock" && getComputerChoice==="scissor") {
+        console.log(lose())
+        gameOver == true
+    } else if (getHumanChoice==="paper" && getComputerChoice==="rock") {
+        console.log(lose())
+        gameOver == true
+    } else if (getHumanChoice==="scissor" && getHumanChoice==="paper") {
+        console.log(lose())
+        gameOver == true
     }
 }
-
-console.log(getComputerChoice())
-console.log(getHumanChoice())
