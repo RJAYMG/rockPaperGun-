@@ -1,4 +1,4 @@
-let choice = ["rock", "paper", "scissor"]
+let choice = ["rock", "paper", "scissor", "gun"]
 
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * choice.length);
@@ -27,6 +27,9 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice==="scissor" && computerChoice==="paper") {
         humanScore += 1
         return "You win this round, Scissor beats Paper"
+    } else if (humanChoice==="gun") {
+        humanScore += 1
+        return "You win, You cheater!!"
     } else if (computerChoice==="rock" && humanChoice==="scissor") {
         computerScore += 1
         return "You lose this round, Rock beats Scissor"
