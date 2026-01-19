@@ -6,14 +6,14 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let pick = prompt("Rock, paper, scisor...?").toLowerCase().trim();
-    if (choice.includes(pick)) {
-        return pick;
+    while (true) {
+        let pick = prompt("Rock, paper, scissor...?").toLowerCase().trim();
+        if (choice.includes(pick)) {
+            return pick;
+        }
     }
 }
 
-const humanChoice = getHumanChoice()
-const computerChoice = getComputerChoice()
 let humanScore = 0
 let computerScore = 0
 
@@ -42,13 +42,11 @@ function playRound(humanChoice, computerChoice) {
         return "This round is Tie!"
     } else if (humanChoice==="scissor" && computerChoice==="scissor") {
         return "This round is Tie!"
-    } else {
-        return "Invalid Value!"
     }
 }
 
 function playGame() {
-    for (i = 1; i<6; i++) {
+    for (let i = 1; i<6; i++) {
         console.log(`Round ${i}`)
         let roundResult = playRound(getHumanChoice(), getComputerChoice())
         console.log(roundResult)
