@@ -1,4 +1,4 @@
-let choice = ["rock", "paper", "scissor", "gun"]
+let choice = ["rock", "paper", "scissors", "gun"]
 
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * choice.length);
@@ -7,7 +7,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     while (true) {
-        let pick = prompt("Rock, paper, scissor...?").toLowerCase().trim();
+        let pick = prompt("Rock, paper, scissors...?").toLowerCase().trim();
         if (choice.includes(pick)) {
             return pick;
         }
@@ -18,32 +18,34 @@ let humanScore = 0
 let computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice==="rock" && computerChoice==="scissor") {
+    if (humanChoice==="rock" && computerChoice==="scissors") {
         humanScore += 1
-        return "You win this round, Rock beats Scissor"
+        return "You win this round, Rock beats Scissors"
     } else if (humanChoice==="paper" && computerChoice==="rock"){
         humanScore += 1
         return "You win this round, Paper beats Rock"
-    } else if (humanChoice==="scissor" && computerChoice==="paper") {
+    } else if (humanChoice==="scissors" && computerChoice==="paper") {
         humanScore += 1
-        return "You win this round, Scissor beats Paper"
+        return "You win this round, Scissors beats Paper"
     } else if (humanChoice==="gun") {
         humanScore += 1
         return "You win, You cheater!!"
-    } else if (computerChoice==="rock" && humanChoice==="scissor") {
+    } else if (computerChoice==="rock" && humanChoice==="scissors") {
         computerScore += 1
-        return "You lose this round, Rock beats Scissor"
+        return "You lose this round, Rock beats Scissors"
     } else if (computerChoice==="paper" && humanChoice==="rock"){
         computerScore += 1
         return "You lose this round, Paper beats Rock"
-    } else if (computerChoice==="scissor" && humanChoice==="paper") {
+    } else if (computerChoice==="scissors" && humanChoice==="paper") {
         computerScore += 1
-        return "You lose this round, Scissor beats Paper"
+        return "You lose this round, Scissors beats Paper"
     } else if (humanChoice==="rock" && computerChoice==="rock") {
         return "This round is Tie!"
     } else if (humanChoice==="paper" && computerChoice==="paper"){
         return "This round is Tie!"
-    } else if (humanChoice==="scissor" && computerChoice==="scissor") {
+    } else if (humanChoice==="scissors" && computerChoice==="scissors") {
+        return "This round is Tie!"
+    } else if (humanChoice==="gun" && computerChoice==="gun") {
         return "This round is Tie!"
     }
 }
