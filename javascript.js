@@ -47,6 +47,15 @@ function playRound(humanChoice, computerChoice) {
         return "This round is Tie!"
     } else if (humanChoice==="gun" && computerChoice==="gun") {
         return "This round is Tie!"
+    } else if (computerChoice==="gun" && humanChoice==="rock") {
+        computerScore += 1
+        return "You lose this round, Computer cheated!"
+    } else if (computerChoice==="gun" && computerChoice==="paper") {
+        computerScore += 1
+        return "You lose this round, Gun beats Papera"
+    } else if (computerChoice==="gun" && computerChoice==="scissors") {
+        computerScore += 1
+        return "You lose this round, Computer cheated!"
     }
 }
 
