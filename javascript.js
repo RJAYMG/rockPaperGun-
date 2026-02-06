@@ -52,7 +52,7 @@ function playRound(humanChoice, computerChoice) {
         return "You lose this round, Computer cheated!"
     } else if (computerChoice==="gun" && computerChoice==="paper") {
         computerScore += 1
-        return "You lose this round, Gun beats Papera"
+        return "You lose this round, Computer cheated!"
     } else if (computerChoice==="gun" && computerChoice==="scissors") {
         computerScore += 1
         return "You lose this round, Computer cheated!"
